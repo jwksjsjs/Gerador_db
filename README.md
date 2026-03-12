@@ -43,7 +43,7 @@ api.py
 O projeto usa algumas ferramentas simples:
 
 - llama-cpp-python para rodar localmente
-- Vicuna como modelo de linguagem
+- Deepseek como modelo de linguagem
 - SQLite para banco de dados
 - FastAPI para gerar uma API simples
 
@@ -81,8 +81,7 @@ pip install llama-cpp-python fastapi uvicorn
 Depois coloque um modelo GGUF no projeto e configure o caminho no código.
 
 Exemplo:
-
-MODEL_PATH = "vicuna-7b.Q4_K_M.gguf"
+MODEL_PATH = "models/deepseek-coder-1.3b-instruct.Q4_K_M.gguf"
 Executando
 Basta rodar:
 python ai_db_system.py
