@@ -19,7 +19,7 @@ def install_dependencies():
 install_dependencies()
 from llama_cpp import Llama
 
-MODEL_PATH = "vicuna-7b.Q4_K_M.gguf"
+MODEL_PATH = "models/deepseek-coder-1.3b-instruct.Q4_K_M.gguf"
 
 def extract_json(text):
     """
@@ -36,10 +36,8 @@ class IaSystem:
 
     def __init__(self):
         print("Carregando modelo...\n")
-        self.llm = Llama(
-            model_path=MODEL_PATH,
-            n_ctx=4096
-        )
+        self.llm = Llama(model_path=MODEL_PATH,n_ctx=2048,n_threads=8
+)
 
     def ask(self, prompt):
 
